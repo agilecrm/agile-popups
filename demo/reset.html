@@ -1,0 +1,36 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Reset Page</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<script type="text/javascript" src="https://YOUR_DOMAIN.agilecrm.com/stats/min/agile-min.js"></script>
+	<script  type= "text/javascript">
+      function all(){
+    	_agile.set_account('YOUR_API_KEY', 'YOUR_DOMAIN');
+    	_agile.set_email("YOUR_VISITOR_EMAIL");
+		_agile.remove_tag('one, two, three, four', {success: function () {console.log("tags removed");}, error: function(){console.log("error");}},"YOUR_VISITOR_EMAIL");
+      }
+      if (window.addEventListener)
+  		window.addEventListener("load", all, false);
+        else if (window.attachEvent)
+  		window.attachEvent("onload", all);
+        else window.onload = all;
+    </script>
+</head>
+
+<body style="text-align: center;">
+	<p style="font-size: 24px; text-align: center;"> reset page </p><br>
+		<p style="text-align: center;" ><a href="reset.html">reset tags</a></p><p>Removed tags</p><br>
+	<ul style="text-align: center;">
+		<li style="display:inline;"><a href="index.html">one</a></li>
+		<li style="display:inline;"><a href="two.html" >two</a></li>	
+		<li style="display:inline;"><a href="three.html" >three</a></li>
+		<li style="display:inline;"><a href="four.html" >four</a></li>
+	</ul>
+</body>
+
+
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Step 4</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<script type="text/javascript" src="https://YOUR_DOMAIN.agilecrm.com/stats/min/agile-min.js"> 
+	</script>
+	<script src="head.load.min.js"></script>
+    <script src="modal.js" type="text/javascript"></script>
+	<script  type= "text/javascript">
+      function all(){
+    	_agile.set_account('YOUR_API_KEY', 'YOUR_DOMAIN');
+		_agile.track_page_view({success: console.log("track page view set")});
+		_agile_execute_webrules();
+      }
+    </script>
+</head>
+
+<body>
+<script>all();</script>
+	<p style="font-size: 24px; text-align: center;"> Step 4 </p><br>
+	<p style="text-align: center;" id="email"></p><br>
+		<script>var mail; _agile.get_email({success: function(data){mail = data.email; if(data.email==null) mail= "not set"; document.getElementById("email").innerHTML = "email: " + mail;}, error: function(){console.log("error");}});</script>
+	<p style="text-align: center;" ><a href="reset.html">reset tags</a></p><p style="text-align: center;" id="tags"></p></br>
+		<script>var tags; _agile.get_tags({success: function(data){tags = data; if(data==null) tags="none"; document.getElementById("tags").innerHTML = "tags: " + tags;}, error: function(){console.log("error");}});</script>
+
+	<ul style="text-align: center;">
+		<li style="display:inline;"><a href="index.html">one</a></li>
+		<li style="display:inline;"><a href="two.html" >two</a></li>	
+		<li style="display:inline;"><a href="three.html" >three</a></li>
+		<li style="display:inline;"><a href="four.html" >four</a></li>
+	</ul>
+</body>
+
+</html>
