@@ -16,16 +16,18 @@
 		_agile.track_page_view({success: console.log("track page view set")});
 		_agile_execute_webrules();
       }
+      if (window.addEventListener) 
+          window.addEventListener("load", all, false);
+      else if (window.attachEvent) 
+          window.attachEvent("onload", all);
+      else 
+          window.onload = all;
     </script>
 </head>
 
 <body>
-<script>all();</script>
-		<p style="font-size: 24px; text-align: center;"> Step 3 </p><br>
-	<p style="text-align: center;" id="email"></p><br>
-		<script>var mail; _agile.get_email({success: function(data){mail = data.email; if(data.email==null) mail= "not set"; document.getElementById("email").innerHTML = "email: " + mail;}, error: function(){console.log("error");}});</script>
-	<p style="text-align: center;" ><a href="reset.html">reset tags</a></p><p style="text-align: center;" id="tags"></p></br>
-		<script>var tags; _agile.get_tags({success: function(data){tags = data; if(data==null) tags="none"; document.getElementById("tags").innerHTML = "tags: " + tags;}, error: function(){console.log("error");}});</script>
+	<p style="font-size: 24px; text-align: center;"> Step 3 </p><br>
+	<p style="text-align: center;" ><a href="reset.html">reset tags</a></p></br>
 
 	<ul style="text-align: center;">
 		<li style="display:inline;"><a href="index.html">one</a></li>
