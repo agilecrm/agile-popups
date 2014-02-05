@@ -12,8 +12,7 @@ Enable tracking code on your website as per instructions here - https://github.c
 
 #Usage
 
-You can configure web rules in Agile CRM at 
-https://YOUR_DOMAIN.agilecrm.com/#webrules
+You can configure web rules in Agile CRM at - https://YOUR_DOMAIN.agilecrm.com/#webrules
 
 
 ##Defining conditions
@@ -88,17 +87,17 @@ Removes the contact (visitor) from the a Campaign if already present.
 
 ### Tags Actions
 
-#### Add Tags:  Adds the specified Tags to the contact (visitor)
+- Add Tags:  Adds the specified Tags to the contact (visitor)
 
-#### Remove Tags: Removes the specified Tags from the contact if present.
+- Remove Tags: Removes the specified Tags from the contact if present.
 
 ### Score
 
-#### Add Score: Adds a set score to the contact (visitor)
+- Add Score: Adds a set score to the contact (visitor)
 
-#### Subtract Score: Decreases the contact score.
+- Subtract Score: Decreases the contact score.
 
-### Execute Code - Action
+### Execute Code
 
 #### Javascript
 You can provide javascript to be executed on the web page.  You can call javascript methods present on your webpage here or write some custom code.
