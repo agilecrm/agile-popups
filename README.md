@@ -19,6 +19,9 @@ You can configure web rules in Agile CRM at - https://YOUR_DOMAIN.agilecrm.com/#
 
 ###Page Conditions:
 
+You need to define a condition(s) first and then choose the action(s) that need to be performed when *all* the conditions are met. 
+For defining the conditions, you have the following options.
+
 ####Page URL
 - Is: You need to provide a complete URL here. his condition evaluates to true when the web page url is exactly the same as input URL
 - Matches: This condition is satisfied when the URL of the page contains the input string.
