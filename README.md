@@ -1,4 +1,4 @@
-Agile CRM - Web Grabbers - Demo/Help
+Agile CRM - Web Grabbers
 ===================
 #What are web rules?
 
