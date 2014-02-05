@@ -35,6 +35,18 @@
     </style>
 </head>
 <body>
+	<script>
+		document.addEventListener("modal_event", modal_event_handler, false);
+		function modal_event_handler(e){
+			e.preventDefault();
+			alert(e.detail.message);
+		}
+		document.addEventListener("noty_event", modal_event_handler, false);
+		function modal_event_handler(e){
+			e.preventDefault();
+			alert(e.detail.message);
+		}
+	</script>
 	<form id="form_id" style="display:none;">
       <h2>Subscribe</h2>
       <br>

@@ -26,6 +26,18 @@
 </head>
 
 <body>
+	<script>
+		document.addEventListener("modal_event", modal_event_handler, false);
+		function modal_event_handler(e){
+			e.preventDefault();
+			alert(e.detail.message);
+		}
+		document.addEventListener("noty_event", modal_event_handler, false);
+		function modal_event_handler(e){
+			e.preventDefault();
+			alert(e.detail.message);
+		}
+	</script>
 	<p style="font-size: 24px; text-align: center;"> Step 3 </p><br>
 	<p style="text-align: center;" ><a href="reset.html">reset tags</a></p></br>
 
