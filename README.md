@@ -42,7 +42,7 @@ You need to change  YOUR_DOMAIN (in 2 places) & YOUR_API_KEY accordingly.
 
 ##Defining conditions
 
-You need to define a condition(s) first and then choose the action(s) that need to be performed when *all* the conditions are met. 
+You need to define condition(s) first, and then choose the action(s) that need to be performed when *all* the conditions are met. 
 For defining the conditions, you have the following options.
 
 ###Page Conditions:
@@ -50,14 +50,13 @@ For defining the conditions, you have the following options.
 Conditions related to which page the user is on referrer URL.
 
 ####Page URL
-- Is: You need to provide a complete URL here. his condition evaluates to true when the web page url is exactly the same as input URL
+- Is: You need to provide a complete URL here. This condition evaluates to true when the web page url is exactly the same as input URL
 - Matches: This condition is satisfied when the URL of the page contains the input string.
 
 ####Referrer URL
 The referrer or referring page is the URL of the previous webpage from which a link was followed.
 - Is: You need to provide a complete URL here. This condition is true when the input URL completely matches the referrer of the current web page.
-- Matches: This condition evaluates to true referrer URI contains the input string
-is’nt: You need to provide a complete URL here. This condition is true when the input URL does not completely matches the referrer of the current web page.
+- Matches: This condition evaluates to true if the referrer URL contains the input string. You do not need to provide a complete URL here. 
 
 ####Visit
 - First time: The visitor on the web page is visiting the page for the first time.
@@ -66,23 +65,23 @@ is’nt: You need to provide a complete URL here. This condition is true when th
 ###Contact Data
 
 For these set of conditions to work, you should have already setup visitor tracking on your website explained here - https://github.com/agilecrm/javascript-api (in section 1).
-There conditions work only for visitors who are already being tracked and a contact is present for them in Agile CRM.
+There conditions work only for visitors who are already being tracked and exist as a Contact in Agile CRM.
 - Tag:
 Checks the tags for the contact in your Agile CRM
 - Tag and Created Date:
-Checks the tag and its creation date in Agile CRM (example, people who have ‘Signup’ tag in last 1 month)
+Checks the tag and its creation date in Agile CRM (for example, people who have the ‘Signup’ tag in the last one month)
 - Score:
-Checks for the Score value of the contact.
+Checks for the value of the Lead Score of the contact.
 - Created: 
-This checks for the contact creation date in Agile CRM. 
+Checks for the contact creation date in Agile CRM. 
 - Company: 
-Checks for the Company property of the Contact.
+Checks for the Company name of the Contact.
 - Job Title: 
-Checks the job title of the contact
+Checks the job title of the contact.
 - Owner: 
-Checks the owner of the contact
+Checks the owner of the contact (who would be a user of the CRM).
 - Custom Fields: 
-You can use them to check the custom  field value of the contact. Only the custom fields that defined as *searchable* will come up here.
+Checks the values in custom fields for the contact. Only the custom fields that defined as *searchable* will come up here.
 
 ##Defining Actions
 The defined actions are performed when all the conditions mentioned are satisfied. One can define multiple actions to be performed.
@@ -92,7 +91,7 @@ This action displays a popup (modal window or a small corner popup) on the web p
 
 You can choose on of the 3 types of popup options available.
 ####Modal Popup
-This shows a Model popup i.e a popup at the center of the screen with rest of the window greyed out. 
+This shows a modal popup i.e a popup at the center of the screen with rest of the window greyed out. 
 You can choose from 3 options here
 - Confirmation
 Shows a popup with a message and Yes/No buttons.
@@ -110,7 +109,7 @@ Displays a predefined form on web page inside the modal window. You need to prov
 ### Campaign Actions
 
 #### Add to Campaign:
-Puts the contact (visitor)  into a Campaign already defined in Agile.
+Puts the contact (visitor) into a Campaign already defined in Agile CRM.
 
 #### Remove from Campaign: 
 Removes the contact (visitor) from the a Campaign if already present.
@@ -123,7 +122,7 @@ Removes the contact (visitor) from the a Campaign if already present.
 
 ### Score
 
-- Add Score: Adds a set score to the contact (visitor)
+- Add Score: Adds a specific score to the contact (visitor).
 
 - Subtract Score: Decreases the contact score.
 
@@ -135,6 +134,6 @@ You can provide javascript to be executed on the web page.  You can call javascr
 ## Timing your actions
 For popup actions, you can time when to show the popups 
 - Immediate: Shows the popup immediately after the page loads.
-- After Certain Time: Show after a specified time in seconds.
+- After Certain Time: Shows after a specified time in seconds.
 - On Starting Scroll: Shows the popup when the user starts scrolling the page
 - On reaching end of Page: Shows the popup when user reaches the bottom of the page.
