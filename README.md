@@ -6,11 +6,7 @@ Web rules allows you to perform certain actions when people visit your website.
 
 For example, when there is an anonymous visitor on the pricing page, pop up a signup form. Or, when a contact in your Agile CRM visits your support page, put him into a campaign that asks if they need any help.
 
-#Prerequisites
-Enable tracking code on your website as per instructions here - https://github.com/agilecrm/javascript-api/
-
-
-#Usage
+#Setup.
 
 Setup this visitor tracking and web rules code on your website 
 
@@ -41,12 +37,17 @@ Setup this visitor tracking and web rules code on your website
 You need to change  YOUR_DOMAIN (in 2 places) & YOUR_API_KEY accordingly. 
 
 
-##Defining conditions
+#Usage
 
-###Page Conditions:
+
+##Defining conditions
 
 You need to define a condition(s) first and then choose the action(s) that need to be performed when *all* the conditions are met. 
 For defining the conditions, you have the following options.
+
+###Page Conditions:
+
+Conditions related to which page the user is on referrer URL.
 
 ####Page URL
 - Is: You need to provide a complete URL here. his condition evaluates to true when the web page url is exactly the same as input URL
@@ -64,7 +65,7 @@ is’nt: You need to provide a complete URL here. This condition is true when th
 
 ###Contact Data
 
-For these set of conditions to work, you should have already setup visitor tracking on your website explained here (in section 1).
+For these set of conditions to work, you should have already setup visitor tracking on your website explained here - https://github.com/agilecrm/javascript-api (in section 1).
 There conditions work only for visitors who are already being tracked and a contact is present for them in Agile CRM.
 - Tag:
 Checks the tags for the contact in your Agile CRM
