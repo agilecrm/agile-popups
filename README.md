@@ -12,7 +12,33 @@ Enable tracking code on your website as per instructions here - https://github.c
 
 #Usage
 
-You can configure web rules in Agile CRM at - https://YOUR_DOMAIN.agilecrm.com/#webrules
+Setup this visitor tracking and web rules code on your website 
+
+```javascript
+<script type="text/javascript"
+ src="https://YOUR_DOMAIN.agilecrm.com/stats/min/agile-min.js"> 
+</script>
+<script type="text/javascript"
+ src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/lib/head.load.min.js">
+</script> 
+<script type="text/javascript"
+ src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/modal.js">
+</script>
+<script  type="text/javascript">
+    function all() {
+        _agile.set_account('YOUR_API_KEY', 'YOUR_DOMAIN');
+        _agile.track_page_view();
+        _agile_execute_webrules();
+        }
+    if (window.addEventListener) 
+    window.addEventListener("load", all, false);
+    else if (window.attachEvent)
+     window.attachEvent("onload", all);
+    else window.onload = all;
+</script>
+```
+
+You need to change  YOUR_DOMAIN (in 2 places) & YOUR_API_KEY accordingly. 
 
 
 ##Defining conditions
