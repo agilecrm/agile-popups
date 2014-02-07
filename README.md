@@ -64,7 +64,7 @@ The referrer or referring page is the URL of the previous webpage from which a l
 
 ###Contact Data
 
-For these set of conditions to work, you should have already setup visitor tracking on your website explained here - https://github.com/agilecrm/javascript-api (in section 1).
+For these set of conditions to work, you should have already setup visitor tracking on your website explained here - https://github.com/agilecrm/javascript-api (in section 1). You do not to put up the code present there since the above code covers that.
 There conditions work only for visitors who are already being tracked and exist as a Contact in Agile CRM.
 - Tag:
 Checks the tags for the contact in your Agile CRM
