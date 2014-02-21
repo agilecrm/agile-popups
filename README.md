@@ -18,13 +18,13 @@ Setup this visitor tracking and web rules code on your website
  src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/lib/head.load.min.js">
 </script> 
 <script type="text/javascript"
- src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/modal.js">
+ src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/agile-webrules.js">
 </script>
 <script  type="text/javascript">
     function all() {
         _agile.set_account('YOUR_API_KEY', 'YOUR_DOMAIN');
         _agile.track_page_view();
-        _agile_execute_webrules();
+        _agile_webrules();
         }
     if (window.addEventListener) 
     window.addEventListener("load", all, false);

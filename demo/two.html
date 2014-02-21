@@ -9,12 +9,12 @@
 	<script type="text/javascript" src="https://YOUR_DOMAIN.agilecrm.com/stats/min/agile-min.js"> 
 	</script>
 	<script src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/lib/head.load.min.js"></script>
-    <script src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/modal.js" type="text/javascript"></script>
+    <script src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/agile-webrules.js" type="text/javascript"></script>
 	<script  type="text/javascript">
       function all(){
         _agile.set_account('YOUR_API_KEY', 'YOUR_DOMAIN');
 		_agile.track_page_view({success: console.log("track page view set")});
-		_agile_execute_webrules();
+		_agile_webrules();
       }
       if (window.addEventListener) 
           window.addEventListener("load", all, false);
