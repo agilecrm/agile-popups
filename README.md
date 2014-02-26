@@ -33,7 +33,7 @@ Setup this visitor tracking and web rules code on your website
     else window.onload = all;
 </script>
 ```
-You need to change  YOUR_DOMAIN (in 2 places) & YOUR_API_KEY accordingly. 
+You need to change  YOUR_DOMAIN (in 2 places) & YOUR_API_KEY accordingly as explained <a href='https://github.com/agilecrm/javascript-api'>here</a>. 
 
 
 
