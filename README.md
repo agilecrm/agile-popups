@@ -33,12 +33,11 @@ Setup this visitor tracking and web rules code on your website
     else window.onload = all;
 </script>
 ```
-
 You need to change  YOUR_DOMAIN (in 2 places) & YOUR_API_KEY accordingly. 
 
 
-#Usage
 
+#Usage
 
 ##Defining conditions
 
@@ -58,9 +57,10 @@ The referrer or referring page is the URL of the previous webpage from which a l
 - Is: You need to provide a complete URL here. This condition is true when the input URL completely matches the referrer of the current web page.
 - Matches: This condition evaluates to true if the referrer URL contains the input string. You do not need to provide a complete URL here. 
 
-####Visit
-- First time: The visitor on the web page is visiting the page for the first time.
-- Recurring: The visitor has visited the web page more than once in a session.
+####Show
+- Every time: The action is performed everytime
+- Once per session: The action is performed once per session (till browser is reopened). Session cookie is stored to ensure that it's being shown only once. 
+- Only Once: The visitor is shown only once per browser.
 
 ###Contact Data
 
@@ -137,3 +137,21 @@ For popup actions, you can time when to show the popups
 - After Certain Time: Shows after a specified time in seconds.
 - On Starting Scroll: Shows the popup when the user starts scrolling the page
 - On reaching end of Page: Shows the popup when user reaches the bottom of the page.
+- About to exit page: Shows the popup for the abandoning visitors.
+
+
+#Controlling Popups using API
+
+Close Popup
+- You can close the browser using _agile_close_modal to close an 
+
+
+#Forms in Popups
+
+Agile supports form in the popups. For Agile to correctly identify the mapping, you should mark the attribute of the input field with the name of field.
+
+<input type="text" name="name" agile-field="first_name" required>
+
+If you are mapping to a custom field, you should use "agile-custom-field"
+
+## Initiate Fields in Popup with the Contact Data
