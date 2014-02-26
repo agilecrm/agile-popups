@@ -23,7 +23,7 @@ Setup this visitor tracking and web rules code on your website
 <script  type="text/javascript">
     function all() {
         _agile.set_account('YOUR_API_KEY', 'YOUR_DOMAIN');
-        _agile.track_page_view();
+        // _agile.track_page_view(); only if tracking is enabled
         _agile_webrules();
         }
     if (window.addEventListener) 
