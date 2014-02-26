@@ -152,10 +152,12 @@ _agile_save_form(boolean should_close, function callback) // Save and execute ca
 
 #Forms & Agile Sync
 
-Forms are now supported in the popups. For Agile to correctly identify the mapping, you should mark the attribute of the input field with the name of field.
-
+Forms are now supported in the popups. 
 
 ## Saving Form Fields to Agile
+
+For Agile to correctly identify the mapping, you should mark the attribute of the input field with the name of field in Agile.
+
 ```
 <input type="text" name="name" agile-field="first_name" required>
 ```
