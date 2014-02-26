@@ -142,16 +142,33 @@ For popup actions, you can time when to show the popups
 
 #Controlling Popups using API
 
-Close Popup
-- You can close the browser using _agile_close_modal to close an 
+You can close the popup, initialize a form using the contact data (if already present) or save the form data to Agile CRM.
+
+```
+_agile_close_modal() // Closing Popup
+_agile_load_fields() // Load fields
+_agile_save_form(boolean should_close, function callback) // Save and execute callback if any. should_close determines if the popup should be closed automatically.
+```
+
+#Forms & Agile Sync
+
+Forms are now supported in the popups. For Agile to correctly identify the mapping, you should mark the attribute of the input field with the name of field.
 
 
-#Forms in Popups
-
-Agile supports form in the popups. For Agile to correctly identify the mapping, you should mark the attribute of the input field with the name of field.
-
+## Saving Form Fields to Agile
+```
 <input type="text" name="name" agile-field="first_name" required>
+```
 
-If you are mapping to a custom field, you should use "agile-custom-field"
+If you are mapping to a custom field, you should use "agile-custom-field" as the attribute
+```
+<input type="number" name="form-quantiy" agile-field="quantity" required>
+```
 
-## Initiate Fields in Popup with the Contact Data
+## Initiating Fields in Popup with the Contact Data
+
+You can initialize the forms with the data of the contact (if available) in the forms.
+
+```
+_agile_load_fields() 
+```
