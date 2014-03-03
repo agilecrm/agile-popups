@@ -14,27 +14,13 @@ Setup this visitor tracking and web rules code on your website
 <script type="text/javascript"
  src="https://YOUR_DOMAIN.agilecrm.com/stats/min/agile-min.js"> 
 </script>
-<script type="text/javascript"
- src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/lib/head.load.min.js">
-</script> 
-<script type="text/javascript"
- src="https://d2l6lw2yloivu1.cloudfront.net/web-grabbers/agile-webrules.js">
-</script>
 <script  type="text/javascript">
-    function all() {
         _agile.set_account('YOUR_API_KEY', 'YOUR_DOMAIN');
         // _agile.track_page_view(); only if tracking is enabled
-        _agile_webrules();
-        }
-    if (window.addEventListener) 
-    window.addEventListener("load", all, false);
-    else if (window.attachEvent)
-     window.attachEvent("onload", all);
-    else window.onload = all;
+        _agile_execute_web_rules(); // this will download all your rules and display the right popup
 </script>
 ```
 You need to change  YOUR_DOMAIN (in 2 places) & YOUR_API_KEY accordingly as explained <a href='https://github.com/agilecrm/javascript-api'>here</a>. 
-
 
 
 #Usage
