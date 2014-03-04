@@ -153,7 +153,7 @@ If you are mapping to a custom field, you should use "agile-custom-field" as the
 <input type="number" name="form-quantiy" agile-field="quantity" required>
 ```
 
-## Initiating Fields in Popup with the Contact Data
+## Initializing Fields in Popup with the Contact Data
 
 You can initialize the forms with the data of the contact (if available) in the forms.
 
