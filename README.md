@@ -134,9 +134,11 @@ You can close the popup, initialize a form using the contact data (if already pr
 _agile_close_modal() // Closing Popup
 _agile_load_fields() // Load fields
 _agile_save_form(boolean should_close, function callback) // Save and execute callback if any. should_close determines if the popup should be closed automatically.
+_agile_hide_close_button() // Hides close button
+
 ```
 
-#Forms & Agile Sync
+# Forms & Agile Sync
 
 Forms are now supported in the popups. 
 
@@ -150,7 +152,7 @@ For Agile to correctly identify the mapping, you should mark the attribute of th
 
 If you are mapping to a custom field, you should use "agile-custom-field" as the attribute
 ```
-<input type="number" name="form-quantiy" agile-field="quantity" required>
+<input type="number" name="form-quantiy" agile-custom-field="quantity" required>
 ```
 
 ## Initializing Fields in Popup with the Contact Data
@@ -160,3 +162,10 @@ You can initialize the forms with the data of the contact (if available) in the 
 ```
 _agile_load_fields() 
 ```
+
+
+## Conflicts with Libraries
+
+Agile uses <a href='handlebarsjs.com'>handlebars</a> and <a href='ned.im/noty/'>noty plugin</a>. So if you are using the same libraries and experiencing a conflict, you can load your version first using the script standard tag.
+
+All the libraries are checked before they are downloaded. This avoids the conflicts.
