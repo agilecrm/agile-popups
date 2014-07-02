@@ -150,9 +150,14 @@ For Agile to correctly identify the mapping, you should mark the attribute of th
 <input type="text" name="name" agile-field="first_name" required>
 ```
 
-If you are mapping to a custom field, you should use "agile-custom-field" as the attribute
+If you are mapping to a custom field, you should use "agile-field" as the attribute
 ```
-<input type="number" name="form-quantiy" agile-custom-field="quantity" required>
+<input type="number" name="form-quantiy" agile-field="quantity" required>
+```
+
+To add tags to contact, you should use "agile-field" as attribute
+```
+<input type="hidden" agile-field="tags" value="tag1, tag2, tag3">
 ```
 
 ## Initializing Fields in Popup with the Contact Data
