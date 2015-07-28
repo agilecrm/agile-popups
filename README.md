@@ -89,9 +89,6 @@ This option can used to provide custom HTML code. The html content will be rende
 ####Noty Message
 This action displays a simple Noty popup on the web page at the specified location. You can use html tags for the content inside the popup.
 
-####Form on website
-Displays a predefined form on web page inside the modal window. You need to provide the ID for the form present in your html page.
-
 ### Campaign Actions
 
 #### Add to Campaign:
